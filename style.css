@@ -1,0 +1,164 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+body,
+p {
+    margin: 0;
+}
+
+html {
+    display: grid;
+    min-height: 100%;
+}
+
+body {
+    display: grid;
+    font-family: "Quicksand", sans-serif;
+}
+
+.container {
+    max-width: 20em;
+}
+
+.container > p {
+    text-align: center;
+}
+
+p {
+    color: #333;
+    font-size: 2em;
+}
+
+.small-text {
+    margin-top: 1em;
+    font-size: 1.5em;
+}
+
+.mini-text {
+    font-size: 0.9em;
+    margin-top: 1em;
+}
+
+input:focus{
+    outline: none;
+}
+
+.calculator {
+    background: #ffffff;
+    margin: auto;
+    position: relative;
+    height: 30em;
+    width: 25em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.3);
+}
+
+.calculator-input {
+    background: #ffffff;
+    color: #000;
+    font-size: 2em;
+    width: 12.5em;
+    border: none;
+    padding: 0.5em 1em 0.5em 1em;
+    text-align: right;
+}
+
+.calculator-keys {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.calculator-keys > * {
+    padding: 1.25em 1.25em;
+    position: relative;
+    text-align: center;
+}
+
+.calculator-keys > *:active::before,
+.calculator-keys > .is-depressed::before {
+    background: #8EC5FC;
+    content: "";
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    opacity: 0.3;
+    position: absolute;
+    z-index: 1;
+}
+
+button {
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    outline: none;
+    appearance: none;
+    text-align: left;
+}
+
+button:hover,
+button:active,
+button:focus {
+    outline: none;
+}
+
+.operator,.key-mem{
+    background: #eeeeeea3;
+    font-size: 1.25em;
+    padding: 0.8em;
+    border: 1px solid #706d6d1a;
+    border-radius: 17px;
+}
+
+.equate {
+    background: #333333b3;
+    color: #ffffff;
+    grid-column: -2;
+    grid-row: 3/span 5;
+    font-size: 1.25em;
+}
+
+.themer {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 10em;
+}
+
+.switch {
+    padding: 1.1em;
+    border-radius: 50%;
+}
+
+.opt1 {
+    background: #2196f3;
+}
+
+.opt2 {
+    background: #9c27b0;
+}
+
+.opt3 {
+    background: #e91e63;
+}
